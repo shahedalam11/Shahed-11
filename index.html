@@ -1,0 +1,1920 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shahed Alam Ayan | Digital Marketer & Graphic Designer</title>
+
+
+    <style>
+
+        /* =================================
+           GLOBAL CSS
+        ================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: #ffffff;
+            transition: 0.4s ease;
+        }
+
+
+        /* =================================
+           NAVBAR
+        ================================= */
+
+        .navbar {
+            width: 100%;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #ffffff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #007bff;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #007bff;
+        }
+
+        .dark-btn {
+            border: none;
+            background: #007bff;
+            color: white;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            font-size: 19px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .dark-btn:hover {
+            transform: rotate(20deg) scale(1.08);
+        }
+
+
+        /* =================================
+           VIDEO HERO SECTION
+        ================================= */
+
+        .video-hero {
+            position: relative;
+            width: 100%;
+            min-height: 570px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            background: #071c20;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .video-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 25, 30, 0.68);
+            z-index: 2;
+        }
+
+        .video-hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 900px;
+            padding: 80px 25px;
+            color: #ffffff;
+            animation: videoHeroFade 1.2s ease;
+        }
+
+        .video-small-text {
+            color: #e85b4a;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 18px;
+        }
+
+        .video-hero-content h1 {
+            color: #ffffff;
+            font-size: 58px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .video-hero-content h2 {
+            color: #e85b4a;
+            font-size: 30px;
+            margin-bottom: 22px;
+        }
+
+        .video-hero-content p {
+            max-width: 700px;
+            margin: auto;
+            color: #f1f5f5;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .video-hero-buttons {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .video-btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #e85b4a;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s ease;
+        }
+
+        .video-btn:hover {
+            background: #ffffff;
+            color: #e85b4a;
+            transform: translateY(-4px);
+        }
+
+        .video-btn-outline {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+
+        .video-btn-outline:hover {
+            background: #ffffff;
+            color: #071c20;
+        }
+
+
+        /* =================================
+           COMMON SECTION
+        ================================= */
+
+        .section-title {
+            color: #007bff;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+
+        /* =================================
+           ABOUT SECTION
+        ================================= */
+
+        .about {
+            padding: 100px 8%;
+            background: #ffffff;
+        }
+
+        .about-content {
+            max-width: 1150px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .about-text {
+            max-width: 680px;
+        }
+
+        .about-text h2 {
+            font-size: 40px;
+            margin-bottom: 25px;
+        }
+
+        .about-text p {
+            color: #666;
+            font-size: 17px;
+            margin: 13px 0;
+            line-height: 1.8;
+        }
+
+        .about-info {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            min-width: 300px;
+        }
+
+        .info-box {
+            padding: 24px 25px;
+            background: #f5f7fa;
+            border-left: 4px solid #007bff;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+            transition: 0.3s ease;
+        }
+
+        .info-box:hover {
+            transform: translateX(8px);
+        }
+
+        .info-box h3 {
+            color: #007bff;
+            margin-bottom: 7px;
+        }
+
+        .info-box p {
+            color: #666;
+        }
+
+
+        /* =================================
+           SERVICES SECTION
+        ================================= */
+
+        .services {
+            padding: 100px 8%;
+            background: #f5f7fa;
+            text-align: center;
+        }
+
+        .services h2,
+        .skills h2,
+        .portfolio h2,
+        .contact h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .services-intro,
+        .skills-intro {
+            color: #666;
+            font-size: 17px;
+            max-width: 650px;
+            line-height: 1.7;
+            margin: 0 auto 50px;
+        }
+
+        .service-container {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-box {
+            background: #ffffff;
+            padding: 35px 25px;
+            min-height: 250px;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+            transition: 0.35s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .service-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+
+        .service-icon {
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .service-box h3 {
+            font-size: 21px;
+            color: #007bff;
+            margin-bottom: 13px;
+        }
+
+        .service-box p {
+            color: #666;
+            line-height: 1.7;
+            font-size: 15px;
+        }
+
+
+        /* =================================
+           SKILLS SECTION
+        ================================= */
+
+        .skills {
+            padding: 100px 8%;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .skills-container {
+            max-width: 1100px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .skill-box {
+            padding: 30px;
+            text-align: left;
+            background: #f5f7fa;
+            border-radius: 12px;
+            border-left: 4px solid #007bff;
+            transition: 0.3s ease;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .skill-box h3 {
+            color: #007bff;
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .skill-box p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+
+        /* =================================
+           PORTFOLIO SECTION
+        ================================= */
+
+        .portfolio {
+            padding: 100px 8%;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .portfolio-intro {
+            color: #666;
+            font-size: 17px;
+            margin-bottom: 50px;
+        }
+
+        .portfolio-container {
+            max-width: 1150px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .portfolio-box {
+            padding: 20px;
+            background: #f5f7fa;
+            border-radius: 14px;
+            transition: 0.3s ease;
+            overflow: hidden;
+        }
+
+        .portfolio-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .portfolio-box img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 9px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-box h3 {
+            color: #007bff;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .portfolio-box p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+
+        /* =================================
+           CONTACT SECTION
+        ================================= */
+
+        .contact {
+            padding: 100px 8%;
+            text-align: center;
+            background: #f5f7fa;
+        }
+
+        .contact > p {
+            color: #666;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .contact-form {
+            max-width: 650px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            outline: none;
+            transition: 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.08);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form button {
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+
+        /* =================================
+           NEW FOOTER
+           Only footer design changed
+        ================================= */
+
+        .new-footer {
+            position: relative;
+            width: 100%;
+            background: #ffffff;
+            overflow: hidden;
+            padding: 70px 0 85px;
+        }
+
+        .new-footer::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -190px;
+            transform: translateX(-50%);
+            width: 900px;
+            height: 320px;
+            background: radial-gradient(
+                ellipse,
+                rgba(63, 111, 220, 0.25) 0%,
+                rgba(63, 111, 220, 0.12) 35%,
+                rgba(63, 111, 220, 0) 75%
+            );
+            pointer-events: none;
+        }
+
+        .footer-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: grid;
+            grid-template-columns: 1.35fr 1fr 1.15fr 1fr;
+            gap: 70px;
+        }
+
+        .footer-about {
+            text-align: left;
+        }
+
+        .footer-logo {
+            font-size: 30px;
+            font-weight: 700;
+            color: #151515;
+            margin-bottom: 14px;
+        }
+
+        .footer-logo span {
+            color: #294fc0;
+        }
+
+        .footer-tagline {
+            font-size: 17px;
+            color: #222;
+            margin: 0 0 28px;
+        }
+
+        .footer-about h2 {
+            font-size: 34px;
+            font-weight: 500;
+            color: #111;
+            margin: 0 0 10px;
+        }
+
+        .footer-email {
+            font-size: 18px;
+            color: #222;
+            margin: 0;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 16px;
+            margin-top: 52px;
+        }
+
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: #2945b8;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            transition: 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-4px);
+            background: #1d3495;
+        }
+
+        .footer-column {
+            text-align: left;
+        }
+
+        .footer-column h3 {
+            font-size: 21px;
+            color: #17265f;
+            margin: 0 0 20px;
+            font-weight: 700;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-column li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 19px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #171717;
+            line-height: 1.4;
+        }
+
+        .footer-column li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #90959f;
+            font-size: 18px;
+        }
+
+        /* Footer responsive */
+        @media (max-width: 1000px) {
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .new-footer {
+                padding: 50px 0 60px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0 25px;
+            }
+
+            .footer-about h2 {
+                font-size: 30px;
+            }
+
+            .social-icons {
+                margin-top: 35px;
+            }
+        }
+
+        /* Dark mode footer */
+        body.dark-mode .new-footer {
+            background: #111827;
+        }
+
+        body.dark-mode .footer-logo,
+        body.dark-mode .footer-about h2,
+        body.dark-mode .footer-tagline,
+        body.dark-mode .footer-email {
+            color: #ffffff;
+        }
+
+        body.dark-mode .footer-column h3 {
+            color: #60a5fa;
+        }
+
+        body.dark-mode .footer-column li {
+            color: #e5e7eb;
+        }
+
+
+        /* =================================
+           ANIMATION
+        ================================= */
+
+        @keyframes videoHeroFade {
+
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =================================
+           DARK MODE
+        ================================= */
+
+        body.dark-mode {
+            background: #111827;
+            color: #ffffff;
+        }
+
+        body.dark-mode .navbar {
+            background: #111827;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        body.dark-mode .nav-links a {
+            color: #ffffff;
+        }
+
+        body.dark-mode .nav-links a:hover {
+            color: #60a5fa;
+        }
+
+        body.dark-mode .about {
+            background: #111827;
+        }
+
+        body.dark-mode .about-text h2 {
+            color: #ffffff;
+        }
+
+        body.dark-mode .about-text p {
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .info-box {
+            background: #1e293b;
+        }
+
+        body.dark-mode .info-box p {
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .services {
+            background: #0f172a;
+        }
+
+        body.dark-mode .services h2,
+        body.dark-mode .skills h2,
+        body.dark-mode .portfolio h2,
+        body.dark-mode .contact h2 {
+            color: #ffffff;
+        }
+
+        body.dark-mode .services-intro,
+        body.dark-mode .skills-intro,
+        body.dark-mode .portfolio-intro,
+        body.dark-mode .contact > p {
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .service-box,
+        body.dark-mode .skill-box,
+        body.dark-mode .portfolio-box {
+            background: #1e293b;
+        }
+
+        body.dark-mode .service-box p,
+        body.dark-mode .skill-box p,
+        body.dark-mode .portfolio-box p {
+            color: #cbd5e1;
+        }
+
+        body.dark-mode .skills,
+        body.dark-mode .portfolio {
+            background: #111827;
+        }
+
+        body.dark-mode .contact {
+            background: #0f172a;
+        }
+
+        body.dark-mode .contact-form input,
+        body.dark-mode .contact-form textarea {
+            background: #1e293b;
+            color: #ffffff;
+            border-color: #475569;
+        }
+
+        body.dark-mode .contact-form input::placeholder,
+        body.dark-mode .contact-form textarea::placeholder {
+            color: #cbd5e1;
+        }
+
+
+        /* =================================
+           RESPONSIVE DESIGN
+        ================================= */
+
+        @media (max-width: 900px) {
+
+            .navbar {
+                padding: 18px 5%;
+            }
+
+            .nav-links {
+                gap: 16px;
+            }
+
+            .video-hero-content h1 {
+                font-size: 48px;
+            }
+
+            .service-container,
+            .portfolio-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+
+        @media (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 18px 20px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 14px;
+            }
+
+            .video-hero {
+                min-height: 520px;
+            }
+
+            .video-hero-content {
+                padding: 70px 20px;
+            }
+
+            .video-hero-content h1 {
+                font-size: 36px;
+            }
+
+            .video-hero-content h2 {
+                font-size: 22px;
+                line-height: 1.5;
+            }
+
+            .video-hero-content p {
+                font-size: 15px;
+            }
+
+            .video-small-text {
+                font-size: 12px;
+                letter-spacing: 2px;
+            }
+
+            .video-btn {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+
+            .about {
+                padding: 75px 20px;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text h2,
+            .services h2,
+            .skills h2,
+            .portfolio h2,
+            .contact h2 {
+                font-size: 32px;
+            }
+
+            .about-info {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .services,
+            .skills,
+            .portfolio,
+            .contact {
+                padding: 75px 20px;
+            }
+
+            .service-container,
+            .skills-container,
+            .portfolio-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .service-box {
+                width: 100%;
+                min-height: 220px;
+            }
+
+            .skill-box {
+                text-align: center;
+            }
+
+            .portfolio-box {
+                width: 100%;
+            }
+
+            .contact-form {
+                width: 100%;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .logo {
+                font-size: 21px;
+            }
+
+            .video-hero {
+                min-height: 500px;
+            }
+
+            .video-hero-content h1 {
+                font-size: 30px;
+            }
+
+            .video-hero-content h2 {
+                font-size: 19px;
+            }
+
+            .video-btn {
+                padding: 11px 18px;
+            }
+
+            .services h2,
+            .skills h2,
+            .portfolio h2,
+            .contact h2 {
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         NAVBAR
+    ================================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Shahed<span>Alam Ayan</span>
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#services">Services</a>
+            </li>
+
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
+
+            <li>
+                <a href="#portfolio">Portfolio</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
+
+        <button id="darkModeBtn" class="dark-btn">
+            🌙
+        </button>
+
+    </nav>
+
+
+
+    <!-- =================================
+         HOME VIDEO HERO
+    ================================= -->
+
+    <section class="video-hero" id="home">
+
+
+        <!-- Background Video -->
+
+        <video
+            class="background-video"
+            autoplay
+            muted
+            loop
+            playsinline>
+
+            <source
+                src="./background-video.mp4"
+                type="video/mp4">
+
+            Your browser does not support video.
+
+        </video>
+
+
+        <!-- Video Overlay -->
+
+        <div class="video-overlay"></div>
+
+
+        <!-- Hero Content -->
+
+        <div class="video-hero-content">
+
+            <p class="video-small-text">
+                HELLO, I'M
+            </p>
+
+
+            <h1>
+                Shahed Alam Ayan
+            </h1>
+
+
+            <h2>
+                Digital Marketer & Graphic Designer
+            </h2>
+
+
+            <p>
+                I help businesses build their online presence
+                through digital marketing and creative graphic design.
+            </p>
+
+
+            <div class="video-hero-buttons">
+
+                <a
+                    href="#contact"
+                    class="video-btn">
+
+                    Hire Me
+
+                </a>
+
+
+                <a
+                    href="#portfolio"
+                    class="video-btn video-btn-outline">
+
+                    View Portfolio
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         ABOUT
+    ================================= -->
+
+    <section class="about" id="about">
+
+
+        <div class="about-content">
+
+
+            <div class="about-text">
+
+                <p class="section-title">
+                    ABOUT ME
+                </p>
+
+
+                <h2>
+                    Digital Marketer & Graphic Designer
+                </h2>
+
+
+                <p>
+                    Hi, I'm Shahed Alam Ayan.
+                    I’m learning and working in Digital Marketing
+                    and Graphic Design.
+                </p>
+
+
+                <p>
+                    I create clean, modern and engaging designs
+                    for businesses, brands and online projects.
+                </p>
+
+
+                <p>
+                    I also work with digital marketing services
+                    such as social media marketing, online advertising,
+                    SEO and email marketing.
+                </p>
+
+
+                <p>
+                    My focus is to understand client requirements
+                    and provide professional, creative and useful
+                    digital solutions.
+                </p>
+
+            </div>
+
+
+
+            <div class="about-info">
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Digital Marketing
+                    </h3>
+
+                    <p>
+                        Online Promotion & Advertising
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        Graphic Design
+                    </h3>
+
+                    <p>
+                        Creative & Professional Designs
+                    </p>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <h3>
+                        My Focus
+                    </h3>
+
+                    <p>
+                        Quality, Creativity & Communication
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         SERVICES
+    ================================= -->
+
+    <section class="services" id="services">
+
+
+        <p class="section-title">
+            MY SERVICES
+        </p>
+
+
+        <h2>
+            What I Can Do
+        </h2>
+
+
+        <p class="services-intro">
+
+            I provide digital marketing and graphic design
+            services for businesses, brands and online projects.
+
+        </p>
+
+
+
+        <div class="service-container">
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    📘
+                </div>
+
+                <h3>
+                    Facebook Ads
+                </h3>
+
+                <p>
+                    Facebook advertising, audience targeting
+                    and promotional campaigns for businesses.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    📸
+                </div>
+
+                <h3>
+                    Instagram Ads
+                </h3>
+
+                <p>
+                    Instagram advertising and creative promotion
+                    to reach relevant audiences.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    🔎
+                </div>
+
+                <h3>
+                    Google Ads
+                </h3>
+
+                <p>
+                    Search and online advertising solutions
+                    for businesses and products.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    🎵
+                </div>
+
+                <h3>
+                    TikTok Ads
+                </h3>
+
+                <p>
+                    TikTok advertising and promotional campaigns
+                    for reaching online audiences.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    🎨
+                </div>
+
+                <h3>
+                    Graphic Design
+                </h3>
+
+                <p>
+                    Creative social media posts, advertisements,
+                    banners and promotional graphics.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    📈
+                </div>
+
+                <h3>
+                    SEO
+                </h3>
+
+                <p>
+                    Search engine optimization to improve
+                    online visibility and website presence.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Social Media Marketing
+                </h3>
+
+                <p>
+                    Social media content and marketing strategies
+                    for businesses and brands.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    🤝
+                </div>
+
+                <h3>
+                    B2B Marketing
+                </h3>
+
+                <p>
+                    Digital marketing solutions designed
+                    for business-to-business communication.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    🛍️
+                </div>
+
+                <h3>
+                    B2C Marketing
+                </h3>
+
+                <p>
+                    Digital promotion strategies focused
+                    on reaching individual customers.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    📧
+                </div>
+
+                <h3>
+                    Gmail & Email Marketing
+                </h3>
+
+                <p>
+                    Professional email communication and
+                    marketing solutions for businesses.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    ✉️
+                </div>
+
+                <h3>
+                    Email Template Design
+                </h3>
+
+                <p>
+                    Clean and professional email templates
+                    for marketing and business communication.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    🌐
+                </div>
+
+                <h3>
+                    WordPress
+                </h3>
+
+                <p>
+                    WordPress website setup, customization
+                    and basic website management.
+                </p>
+
+            </div>
+
+
+
+            <div class="service-box">
+
+                <div class="service-icon">
+                    📂
+                </div>
+
+                <h3>
+                    Business Directory
+                </h3>
+
+                <p>
+                    Business listing and directory-related
+                    digital marketing support.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         SKILLS
+    ================================= -->
+
+    <section class="skills" id="skills">
+
+
+        <p class="section-title">
+            MY SKILLS
+        </p>
+
+
+        <h2>
+            Skills & Expertise
+        </h2>
+
+
+        <p class="skills-intro">
+
+            Areas I am learning and working with in digital marketing
+            and graphic design.
+
+        </p>
+
+
+
+        <div class="skills-container">
+
+
+            <div class="skill-box">
+
+                <h3>
+                    Digital Marketing
+                </h3>
+
+                <p>
+                    Facebook Ads • Instagram Ads • Google Ads • TikTok Ads
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-box">
+
+                <h3>
+                    Social Media Marketing
+                </h3>
+
+                <p>
+                    Social Media Strategy • Content Promotion • Audience Targeting
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-box">
+
+                <h3>
+                    Graphic Design
+                </h3>
+
+                <p>
+                    Social Media Design • Advertisement Design • Promotional Graphics
+                </p>
+
+            </div>
+
+
+
+            <div class="skill-box">
+
+                <h3>
+                    SEO & Online Marketing
+                </h3>
+
+                <p>
+                    SEO • B2B Marketing • B2C Marketing • Email Marketing
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         PORTFOLIO
+    ================================= -->
+
+    <section class="portfolio" id="portfolio">
+
+
+        <p class="section-title">
+            MY WORK
+        </p>
+
+
+        <h2>
+            My Portfolio
+        </h2>
+
+
+        <p class="portfolio-intro">
+
+            Here are some of my digital marketing and graphic
+            design projects.
+
+        </p>
+
+
+
+        <div class="portfolio-container">
+
+
+            <div class="portfolio-box">
+
+                <img
+                    src="./work1.png"
+                    alt="Digital Marketing Project">
+
+                <h3>
+                    Digital Marketing
+                </h3>
+
+                <p>
+                    Digital marketing and online promotion project.
+                </p>
+
+            </div>
+
+
+
+            <div class="portfolio-box">
+
+                <img
+                    src="./work2.png"
+                    alt="Graphic Design Project">
+
+                <h3>
+                    Graphic Design
+                </h3>
+
+                <p>
+                    Creative and professional graphic design project.
+                </p>
+
+            </div>
+
+
+
+            <div class="portfolio-box">
+
+                <img
+                    src="./work3.png"
+                    alt="Social Media Marketing Project">
+
+                <h3>
+                    Social Media Marketing
+                </h3>
+
+                <p>
+                    Social media marketing and promotional project.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         CONTACT
+    ================================= -->
+
+    <section class="contact" id="contact">
+
+
+        <p class="section-title">
+            GET IN TOUCH
+        </p>
+
+
+        <h2>
+            Let's Work Together
+        </h2>
+
+
+        <p>
+
+            Have a project or marketing idea in mind?
+            Feel free to contact me.
+
+        </p>
+
+
+
+        <form
+            class="contact-form"
+            action="https://formspree.io/f/xaenopqo"
+            method="POST">
+
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required>
+
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required>
+
+
+            <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                required>
+
+
+            <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="6"
+                required></textarea>
+
+
+            <button
+                type="submit"
+                class="video-btn">
+
+                Send Message
+
+            </button>
+
+
+        </form>
+
+
+
+        <div class="contact-buttons">
+
+
+            <a
+                href="https://facebook.com/"
+                class="video-btn"
+                target="_blank">
+
+                Facebook
+
+            </a>
+
+
+            <a
+                href="https://wa.me/8801761837681"
+                class="video-btn"
+                target="_blank">
+
+                WhatsApp
+
+            </a>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================
+         NEW FOOTER
+         Previous website content above is unchanged
+    ================================= -->
+
+    <footer class="new-footer">
+
+        <div class="footer-container">
+
+            <!-- About / Contact -->
+            <div class="footer-about">
+
+                <div class="footer-logo">
+                    Shahed<span>Alam Ayan</span>
+                </div>
+
+                <p class="footer-tagline">
+                    Digital Marketing & Graphic Design
+                </p>
+
+                <h2>Contact</h2>
+
+                <p class="footer-email">
+                    mail@shahedalamayan.com
+                </p>
+
+                <div class="social-icons">
+
+                    <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn">
+                        in
+                    </a>
+
+                    <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+                        ◎
+                    </a>
+
+                    <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
+                        f
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Industries -->
+            <div class="footer-column">
+
+                <h3>Industries</h3>
+
+                <ul>
+                    <li>FinTech</li>
+                    <li>E-commerce</li>
+                    <li>Healthcare</li>
+                    <li>IoT</li>
+                    <li>SaaS</li>
+                    <li>ERP</li>
+                    <li>Logistics</li>
+                </ul>
+
+            </div>
+
+
+            <!-- Services -->
+            <div class="footer-column">
+
+                <h3>Services</h3>
+
+                <ul>
+                    <li>Facebook Ads</li>
+                    <li>Instagram Ads</li>
+                    <li>Google Ads</li>
+                    <li>TikTok Ads</li>
+                    <li>Graphic Design</li>
+                    <li>SEO</li>
+                    <li>Social Media Marketing</li>
+                    <li>Email Marketing</li>
+                </ul>
+
+            </div>
+
+
+            <!-- Company -->
+            <div class="footer-column">
+
+                <h3>Company</h3>
+
+                <ul>
+                    <li>About Me</li>
+                    <li>Why Choose Me</li>
+                    <li>My Skills</li>
+                    <li>Portfolio</li>
+                    <li>Contact</li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =================================
+         DARK MODE SCRIPT
+    ================================= -->
+
+    <script>
+
+
+        const darkModeBtn =
+            document.getElementById("darkModeBtn");
+
+
+        darkModeBtn.addEventListener("click", function () {
+
+
+            document.body.classList.toggle("dark-mode");
+
+
+            if (
+                document.body.classList.contains("dark-mode")
+            ) {
+
+                darkModeBtn.innerHTML = "☀️";
+
+            } else {
+
+                darkModeBtn.innerHTML = "🌙";
+
+            }
+
+
+        });
+
+
+    </script>
+
+
+</body>
+
+</html>
